@@ -1,0 +1,55 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+We knew that we had changed something that broke the game, because it was working before and now it wasn't.
+And we hadn't changed very many lines.
+But there were a lot of lines in the code, so it'd take a really long time to manually check them for changes.
+If there were a way to see only the lines tha changed, we could check them easily, because only a few lines changed.
+So diff really helped us, because it automatically looked through all the lines and found the changes.
+
+
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+Having easy access to the history of a file would let me roll back changes to see what affects what in the code.
+If I made a mistake, I could go back to an old version easily, even after I'd hit save and couldn't undo.
+
+-git log shows you history of commits.  you can do --stats flag to show you statistics about what was done in each
+-git diff [id of old commit] [id of new commit]  will show u the differences between any two git commits in your directory
+
+-you should do one commit per logical change you make -- so if you fix a bug and a typo, make that two commits, since those are two logically different things.  If you fix 3 typos, make that one commit called "fixed 3 typos" because that fits as a single logical unit.  If you are working on a new feature for a week, you should have more than one commit for different parts of that.  If you are working on a new feature for an hour, that might make sense as a single commit
+
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+Con of manually choosing is that you might forget for a while and then not have enough commits--you could make a mistake and need to do a lot of manual backtracking then to fix it.
+Pro of manually choosing is you can do it in logical increments, which is a jillion times better for keeping your shit organized and easily searchable and usable.
+Con of auto committing is you'll get a bunch of useless commits that make no logical sense--it'll be hard to know which commit to look at to roll back which changes. Also, a commit could occur while your code is in an uncompilable state, which would be silly.
+
+Repository technically means a set of files
+	-This is good cuz it lets you track changes to all of them together, rather than individuall, which, for code, would be a pain, cuz logical changes fequently span multiple files
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+Git does this because code frequently involves changes to multiple files in a single logical change. 
+Google Docs doesn't do this because changes to most non-code type files don't involve changes to multiple files in a single logical change
+
+
+How can you use the commands git log and git diff to view the history of files?
+You do git log to see all the commits that have been done.
+If you want to see the changes between any two commits, do git diff, then copy the id of the older version, and then copy the id of the newer version and hit enter to run the diff
+It'll then show you a cool report of the changes that happened (lines deleted and insterted)
+
+-git checkout resets all files in respository to what they were at the time the specified commit was made--a way of rolling back.
+
+How might using version control make you more confident to make changes that could break something?
+It'll make me more confident because I know I can very easily roll back those changes and not lose any work.  It also will let me isolate exactly which change broke something, so I might not need to roll back changes very much at all, and just roll back the one line that made it break.  You can feel free to make really fundamental, scary changes.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+I'd like to try using it for all the programs I'm currently working on writing.
+
+By putting a "." at the front of a filename or directory name, the OS will hide this file/directory from the user most of the time.  You need to do ls -a to see it.
+.git directory contains metadata of all the changes to your project, and is where all the info that makes git possible is stored
+
+git init creates a new git repo in the current directory
+    -note, git init does not create a commit with the initial stuff in the directory--you have to do the first commit yourself by doing git commit --they do this so you can put a message on your first commit and include only things you watn to include
+    
+
+
+
