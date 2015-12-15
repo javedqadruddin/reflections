@@ -1,0 +1,12 @@
+What happens when you initialize a repository? Why do you need to do it?
+It creates the .git directory to store the metadata for your project and lets you type in the various git commands in that direcotry to save information to the .git directory
+
+Git has a staging area to let you commit indiv files or only a certain group of files if you don't want commit everything in the directory  
+	git add 
+	and to check what has been staged, you do git status
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+Staging area is just the things from the repository that you want to have in your next commit
+It gives you the ability to avoid committing everything in the repo if you don't want to, so it gives nice flexibility if you're still working on some files, but want to commit some changes from files you've completed working on and are logically distinct from the files you're still working on
+
