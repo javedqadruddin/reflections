@@ -28,3 +28,10 @@ What are some situations when branches would be helpful in keeping your history 
 	Branches are useful when you want to go see what it'd be like to go in a different direction while continuing to move forward on the original too. 
 	Lets you move forward on different approaches simultaneously
 
+Reachability - when you branch, there will be situaitons where you cannot "revert" from some places in one branch to some places in another if the branches haven't merged
+
+You can make a new branch and check it out by doing git checkout -b [new branch name]
+
+How do the diagrams help you visualize the branch structure?
+Diagrams help you see the places where the code branches off from each other, so you can figure out what you can revert to from a certain spot and what you cannot revert to from a certain spot
+
