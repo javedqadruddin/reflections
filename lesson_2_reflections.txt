@@ -35,3 +35,19 @@ You can make a new branch and check it out by doing git checkout -b [new branch 
 How do the diagrams help you visualize the branch structure?
 Diagrams help you see the places where the code branches off from each other, so you can figure out what you can revert to from a certain spot and what you cannot revert to from a certain spot
 
+git merge [branch 1] [branch 2] merges two commits (in this case pointed to by branch names)
+	-The log will not interleve the commits from both branches and sort them by time
+	-This introduces a difficulty because now if you do git diff of one commit with the one before it, the one before it might not be its parent
+	-To deal with this, there's a command called git show [commit id] .. git show will show you the differences between a commit and its parent, not just the commit before it in the log
+
+To delete a branch pointer, do git branch -d [name of branch]
+	-This deletes only the pointer, not the commits that are in teh branch
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+	Result of merging is taking the changes in each branch and adding them all to the common ancestor of the two branches 
+	Another result is getting the pointers for both branches to point at a new commit which contains the merged changes
+	The diagram is as it is because it shows how the changes work like branches in a tree.  The parents of the various commits are preserved and you can use git show to give you the changes at each commit, even after merging
+	
+
+
