@@ -1,0 +1,13 @@
+git remote command lets you create remotes for your local git repository
+	remotes are remote locations that you can push and pull commits to /from
+	git remote    by itself will show you what remotes you already have on this repo
+	git remote add [name] [url]
+		-standard name for first remote is 'origin'
+	git remote -v gives you more information the remotes you have inthis repo (verbose)
+	git push [remote name] [local branch name] pushes that branch to the remote
+		ex. git push origin master sends the master branch to origin
+
+When would you want to use a remote repository rather than keeping all your work local?
+  You'd definitely use it when you're collaborating with other people.
+  You might also want to use it to store your code in a place where it'll be safe even if something happens to your local computer
+  
