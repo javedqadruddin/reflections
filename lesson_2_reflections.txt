@@ -49,5 +49,11 @@ What is the result of merging two branches together? Why do we represent it in t
 	Another result is getting the pointer for the currently checked-out branch to point at a new commit containing the merged changes
 	The diagram is as it is because it shows how the changes work like branches in a tree.  The parents of the various commits are preserved and you can use git show to give you the changes at each commit, even after merging
 
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+	Git's auto merging is way faster than manual merging.
+	Git's auto merging will alert you whenever there's a potential conflict
+	This conflict alert may give a lot of false alarms because it doesn't want you to miss anything, so that's sort of a con, but, manually, you'd have to go through that process anyway
+	Git's auto merge saves a ton of time where there's no conlfict, and, where there is a conflict, it is no slower than manual (and it points out where the conflict is, so probably is still faster)
+
 
 
