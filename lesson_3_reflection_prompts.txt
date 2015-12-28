@@ -10,4 +10,14 @@ git remote command lets you create remotes for your local git repository
 When would you want to use a remote repository rather than keeping all your work local?
   You'd definitely use it when you're collaborating with other people.
   You might also want to use it to store your code in a place where it'll be safe even if something happens to your local computer
+
+
+  git pull [name of remote] [name of branch on remote] pulls the latest commits from the remote onto your local repo into the currently checked-out branch
+
+
+  Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+  	If you auto-pull, it might pull in changes that conflict with your own at  time when you are working on something
+  	It's many of the same reasons you wouldn't want to auto commit
+  	
+
   
