@@ -18,6 +18,23 @@ When would you want to use a remote repository rather than keeping all your work
   Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
   	If you auto-pull, it might pull in changes that conflict with your own at  time when you are working on something
   	It's many of the same reasons you wouldn't want to auto commit
-  	
+
+  A fork is just a git clone that occurs on github's servers
+  	-The fork will have links back to the original so the original author can get credit
+  	-also, github keeps track of how many forks come from one repo, so that's kinda cool
+  	-Once you fork into your github account, you can clone the repo down to your machine and make changes you want and commit them to your fork
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+	-forks occur only on the github servers and take someone else's repository and clone it to your github account
+		-changes you make from there on occur on your account and not on the account you originally forked it from
+		-fork does preserve info as to where it originated tho so the original person gets credit
+	-clones occur on your machine and other machines in any git directory
+		-when you clone a repo, you get a copy of it that you can then edit and make commits to
+	-branches are pointers to a certain commit that have names that you give them
+		-they help keep track of different versions of code that you want to have
+		-you make commits in a branch
+		-you can merge branches to bring changes made in different branches together
+		-you can push a branch (or any commit really) to a github repo
+	
 
   
