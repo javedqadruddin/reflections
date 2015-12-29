@@ -35,6 +35,21 @@ Describe the differences between forks, clones, and branches. When would you use
 		-you make commits in a branch
 		-you can merge branches to bring changes made in different branches together
 		-you can push a branch (or any commit really) to a github repo
+
+When you make a remote, it actually creates a "hidden" branch in your local repo that points to the latest commit you got from the remote repo
+	-it'll be called [name of remote]/[name of branch], so, in simple example origin/master
+	git fetch command updates this local copy of the remote branch without merging it with your regular local branch
+		-You can then use this to compare and merge into your local if you want to, while repairing conflicts
+	git pull basically does all these steps at once--fetches into the local copy of remote branch and then merging with your regular local branch.
+		-git pull is the same as git fetch followed by git merge
+		git fetch origin
+		git merge master origin/master
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+	It's beneficial so you can see the differences beforehand if there's a conflict between your local copy and the remote one
+	It's also beneficial if you want to periodically check the state of the remote copy without yet merging the changes into your local one
 	
+
+
 
   
