@@ -48,6 +48,11 @@ When you make a remote, it actually creates a "hidden" branch in your local repo
 What is the benefit of having a copy of the last known state of the remote stored locally?
 	It's beneficial so you can see the differences beforehand if there's a conflict between your local copy and the remote one
 	It's also beneficial if you want to periodically check the state of the remote copy without yet merging the changes into your local one
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+	-I'm really not sure how I'd collaborate without using github... I suppose I'd have to have only 1 person working on any given file at a time
+	-Then we'd send each other our changes to those files periodically
+	-This would be a pain since in programming you often have files that you'd like to have mulitple people working on at once
 	
 
 
